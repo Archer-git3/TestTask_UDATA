@@ -1,0 +1,15 @@
+<!-- templates/product.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    {% for key, value in product.items() %}
+        <p><strong>{{ key }}:</strong> {{ value }}</p>
+    {% endfor %}
+    <a href="{{ url_for('index') }}">Back to all products</a>
+</body>
+</html>
